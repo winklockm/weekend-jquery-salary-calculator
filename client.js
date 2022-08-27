@@ -1,5 +1,7 @@
 $(document).ready(onReady);
 
+$(document).on('click', '.deletebutton', deleteRow);
+
 function onReady(){
     $('#submit-button').on('click', handleSubmit);
 }
@@ -26,7 +28,7 @@ function handleSubmit(){
     // push object to array
     employeeArray.push(employee);
     // add data to table
-    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>${salaryInput}</td></tr>`);
+    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>${salaryInput}</td><td><button class="deletebutton">Delete</button></td></tr>`);
     // run function to calculate monthly total from the updated array
     calculateTotalFromArray(employeeArray);
     //clear input fields
@@ -49,4 +51,8 @@ function calculateTotalFromArray(employeeArray){
     if(totalMonthly > 20000){
         $('#total-monthly').css('background-color', 'red');
     }
+}
+
+function deleteRow() {
+    $( this ).closest('tr').remove();
 }
