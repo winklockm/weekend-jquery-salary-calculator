@@ -16,7 +16,7 @@ function handleSubmit(){
     let idNumInput = $('#id-input').val();
     let titleInput = $('#title-input').val();
     let salaryInput = $('#salary-input').val();
-    let monthlySalary = salaryInput/12;
+    let monthlySalary = Math.round(salaryInput/12);
     let employee = {
         firstname: firstNameInput,
         lastname: lastNameInput,
@@ -28,7 +28,7 @@ function handleSubmit(){
     // push object to array
     employeeArray.push(employee);
     // add data to table
-    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>${salaryInput}</td><td><button class="deletebutton">Delete</button></td></tr>`);
+    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>$${salaryInput}</td><td><button class="deletebutton">Delete</button></td></tr>`);
     // run function to calculate monthly total from the updated array
     calculateTotalFromArray(employeeArray);
     //clear input fields

@@ -1,12 +1,47 @@
 body {
     background-color: lightseagreen;
+    text-align: center;
+    margin: 0;
 }
 
-table, th, td {
-    border: 1px solid black;
+.inputsection {
+    text-align: left;
+}
+table {
     border-collapse: collapse;
+    width: 90%;
+    table-layout: fixed;
   }
 
-.deletebutton {
-    
+th, td {
+    border: 1px solid black;
+}
+
+thead {
+    background-color: lightgray;
+    font-weight: bold;
+    height: 50px;
+}
+
+tbody {
+    background-color: whitesmoke;
+}
+
+td {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    background-color: gray;
+}
+
+h2 {
+    text-align: left;
+}
+
+h1 {
+    background-color: gray;
+    padding: 20px;
+    margin: 0;
 }
