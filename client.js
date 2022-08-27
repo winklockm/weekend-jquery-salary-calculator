@@ -45,4 +45,8 @@ function calculateTotalFromArray(employeeArray){
     // update Total Monthly at bottom of page
     $('#total-monthly').empty();
     $('#total-monthly').append(totalMonthly);
+    // if total > 20,000 set background to red
+    if(totalMonthly > 20000){
+        $('#total-monthly').css('background-color', 'red');
+    }
 }
