@@ -1,9 +1,8 @@
 $(document).ready(onReady);
 
-$(document).on('click', '.deletebutton', deleteRow);
-
 function onReady(){
     $('#submit-button').on('click', checkInput);
+    $(document).on('click', '.deletebutton', deleteRow);
 }
 
 let employeeArray = [];
