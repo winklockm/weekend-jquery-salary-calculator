@@ -47,7 +47,7 @@ function addEmployee(){
     $('#salary-input').val('');
 }
 
-//calculate total monthly cost using data from an array (employee array is passed in using handleSubmit function)
+//calculate total monthly cost using data from an array
 function calculateTotalFromArray(employeeArray){
     // target the .monthlysal of the last item in the array and add it to the total monthly
     let newMonthly = employeeArray[employeeArray.length-1].monthlysal;
