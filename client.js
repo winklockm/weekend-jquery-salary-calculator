@@ -3,13 +3,20 @@ $(document).ready(onReady);
 $(document).on('click', '.deletebutton', deleteRow);
 
 function onReady(){
-    $('#submit-button').on('click', handleSubmit);
+    $('#submit-button').on('click', checkInput);
 }
 
 let employeeArray = [];
 let totalMonthly = 0;
 
-function handleSubmit(){
+// only submit if all fields are filled out
+function checkInput(){
+    if($('#firstname-input').val() && $('#lastname-input').val() && $('#id-input').val() && $('#title-input').val() && $('#salary-input').val()){
+        addEmployee();
+    }
+}
+
+function addEmployee(){
     // create object
     let firstNameInput = $('#firstname-input').val();
     let lastNameInput = $('#lastname-input').val();
