@@ -15,17 +15,21 @@
         <h1>Salary Calculator</h1>
     </header>
     <main>
-        <h2>Add Employee</h2>
-        <div class="inputsection">
-            <input type="text" placeholder="First Name" id="firstname-input">
-            <input type="text" placeholder="Last Name" id="lastname-input">
-            <input type="text" placeholder="ID Number" id="id-input">
-            <input type="text" placeholder="Job Title" id="title-input">
-            <input type="number" placeholder="Annual Salary" id="salary-input">
-            <button id="submit-button">Submit</button>
+        <div class="add-new">
+            <h2>Add Employee</h2>
+            <div class="inputsection">
+                <input type="text" placeholder="First Name" id="firstname-input">
+                <input type="text" placeholder="Last Name" id="lastname-input">
+                <input type="text" placeholder="ID Number" id="id-input">
+                <input type="text" placeholder="Job Title" id="title-input">
+                <input type="number" placeholder="Annual Salary" id="salary-input">
+                <div class="submitbtn">
+                    <button id="submit-button">Submit</button>
+                </div>
+            </div>
         </div>
         <h2>Employees</h2>
-        <table id="datatable">
+        <table id="datatable" class="center">
             <thead>
                 <tr>
                     <th>First Name</th>

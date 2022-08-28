@@ -52,7 +52,7 @@ function calculateTotalFromArray(employeeArray){
         $('#total-monthly').css('background-color', 'red');
     }
 }
-
+ // delete row when delete button is clicked
 function deleteRow() {
     $( this ).closest('tr').remove();
 }

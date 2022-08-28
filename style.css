@@ -1,16 +1,44 @@
 body {
-    background-color: lightseagreen;
+    background-color: #DDBEA8;
     text-align: center;
     margin: 0;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* sections */
+main {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .inputsection {
     text-align: left;
+    background-color: #F3DFC1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+footer {
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.submitbtn {
+    padding-top: 10px;
+    text-align: right;
+}
+
+/* table */
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 th, td {
@@ -18,7 +46,7 @@ th, td {
 }
 
 thead {
-    background-color: lightgray;
+    background-color: #368F8B;
     font-weight: bold;
     height: 50px;
 }
@@ -31,17 +59,16 @@ td {
     text-align: center;
 }
 
-footer {
-    text-align: right;
-    background-color: gray;
+/* headers */
+h1 {
+    background-color: #246A73;
+    padding: 20px;
+    margin: 0;
+    color: white;
 }
 
 h2 {
     text-align: left;
-}
-
-h1 {
-    background-color: gray;
-    padding: 20px;
-    margin: 0;
+    text-transform: uppercase;
+    font-size: 17px;
 }
