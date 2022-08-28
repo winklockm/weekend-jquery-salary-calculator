@@ -22,7 +22,8 @@ function addEmployee(){
     let idNumInput = $('#id-input').val();
     let titleInput = $('#title-input').val();
     let salaryInput = $('#salary-input').val();
-    let monthlySalary = Math.round(salaryInput/12);
+    let formatSal = (Number(salaryInput)).toLocaleString('en-US'); // converts to number and then to string
+    let monthlySalary = Math.round(salaryInput/12); // rounds to integer
     let employee = {
         firstname: firstNameInput,
         lastname: lastNameInput,
@@ -31,10 +32,11 @@ function addEmployee(){
         salary: salaryInput,
         monthlysal: monthlySalary,
     }
+
     // push object to array
     employeeArray.push(employee);
     // add data to table
-    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>$${salaryInput}</td><td><button class="deletebutton">Delete</button></td></tr>`);
+    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>$${formatSal}</td><td><button class="deletebutton">Delete</button></td></tr>`);
     // run function to calculate monthly total from the updated array
     calculateTotalFromArray(employeeArray);
     //clear input fields
@@ -50,9 +52,11 @@ function calculateTotalFromArray(employeeArray){
     // target the .monthlysal of the last item in the array and add it to the total monthly
     let newMonthly = employeeArray[employeeArray.length-1].monthlysal;
     totalMonthly += newMonthly;
+    // convert totalMonthly to string
+    let num = totalMonthly.toLocaleString('en-US');
     // update Total Monthly at bottom of page
     $('#total-monthly').empty();
-    $('#total-monthly').append(totalMonthly);
+    $('#total-monthly').append(num);
     // if total > 20,000 set background to red
     if(totalMonthly > 20000){
         $('#total-monthly').css('background-color', 'red');
@@ -62,3 +66,9 @@ function calculateTotalFromArray(employeeArray){
 function deleteRow() {
     $( this ).closest('tr').remove();
 }
+
+
+// You will need to figure out which employee was removed, 
+// in order to subtract their salary from the total. 
+// Consider using `.text()` as a getter, or look into jQuery's 
+// `.data()` function. This is tricky! 
