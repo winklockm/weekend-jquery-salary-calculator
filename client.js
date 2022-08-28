@@ -16,7 +16,7 @@ function checkInput(){
 }
 
 function addEmployee(){
-    // create object
+    // create variables
     let firstNameInput = $('#firstname-input').val();
     let lastNameInput = $('#lastname-input').val();
     let idNumInput = $('#id-input').val();
@@ -24,6 +24,7 @@ function addEmployee(){
     let salaryInput = $('#salary-input').val();
     let formatSal = (Number(salaryInput)).toLocaleString('en-US'); // converts to number and then to string
     let monthlySalary = Math.round(salaryInput/12); // rounds to integer
+    // create object
     let employee = {
         firstname: firstNameInput,
         lastname: lastNameInput,
@@ -32,14 +33,13 @@ function addEmployee(){
         salary: salaryInput,
         monthlysal: monthlySalary,
     }
-
     // push object to array
     employeeArray.push(employee);
     // add data to table
     $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td class="employeeid">${idNumInput}</td><td>${titleInput}</td><td>$${formatSal}</td><td><button class="deletebutton">Delete</button></td></tr>`);
     // run function to calculate monthly total from the updated array
     calculateTotalFromArray(employeeArray);
-    //clear input fields
+    // clear input fields
     $('#firstname-input').val('');
     $('#lastname-input').val('');
     $('#id-input').val('');
