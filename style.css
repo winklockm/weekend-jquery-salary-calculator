@@ -1,5 +1,5 @@
 body {
-    background-color: #DDBEA8;
+    background-color: #F1FFFA;
     text-align: center;
     margin: 0;
     color: black;
@@ -24,7 +24,7 @@ main {
 
 .inputsection {
     text-align: left;
-    background-color: #F3DFC1;
+    background-color: #93B7BE;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
@@ -56,13 +56,14 @@ th, td {
 }
 
 thead {
-    background-color: #368F8B;
+    background-color: #785964;
     font-weight: bold;
     height: 50px;
+    color: white;
 }
 
 tbody {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 td {
@@ -72,7 +73,7 @@ td {
 
 /* headers */
 h1 {
-    background-color: #246A73;
+    background-color: #785964;
     padding: 20px;
     margin: 0;
     color: white;
@@ -84,7 +85,7 @@ h2 {
     font-size: 17px;
 }
 
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: whitesmoke}
+tr:nth-child(even) {background: #D5C7BC}
+tr:nth-child(odd) {background: white}
 tr:nth-child(1) {
 background:none;}
