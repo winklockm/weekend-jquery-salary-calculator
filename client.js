@@ -36,7 +36,7 @@ function addEmployee(){
     // push object to array
     employeeArray.push(employee);
     // add data to table
-    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idNumInput}</td><td>${titleInput}</td><td>$${formatSal}</td><td><button class="deletebutton">Delete</button></td></tr>`);
+    $('#datatable').append(`<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td class="employeeid">${idNumInput}</td><td>${titleInput}</td><td>$${formatSal}</td><td><button class="deletebutton">Delete</button></td></tr>`);
     // run function to calculate monthly total from the updated array
     calculateTotalFromArray(employeeArray);
     //clear input fields
@@ -66,9 +66,3 @@ function calculateTotalFromArray(employeeArray){
 function deleteRow() {
     $( this ).closest('tr').remove();
 }
-
-
-// You will need to figure out which employee was removed, 
-// in order to subtract their salary from the total. 
-// Consider using `.text()` as a getter, or look into jQuery's 
-// `.data()` function. This is tricky! 
